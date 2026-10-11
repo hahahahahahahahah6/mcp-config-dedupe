@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-config-dedupe"
+version = "0.1.0"
+description = "Detect duplicate, drifted, and dead MCP server configs across clients — and dedupe them in one command"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "hao li", email = "haoli5933@gmail.com" }]
+keywords = ["mcp", "model-context-protocol", "config", "dedupe", "claude", "cursor", "vscode", "codex"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: System :: Systems Administration",
+    "Topic :: Utilities",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/hahahahahahahahah6/mcp-config-dedupe"
+Issues = "https://github.com/hahahahahahahahah6/mcp-config-dedupe/issues"
+
+[project.scripts]
+mcp-dedupe = "mcp_dedupe.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["mcp_dedupe*"]
